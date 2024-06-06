@@ -9,6 +9,106 @@
 
 <h1>Reisebuchungs-Formular</h1>
 
+<form action="https://it.bzz.ch/demo/formdata/index.php">
+  <fieldset>
+    <legend>Abflughafen</legend>
+    <select name="Abflughafen">
+      <optgroup label="Schweiz">
+        <option value="ch-genf">Genf Flughafen</option>
+        <option value="ch-basel">Basel Flughafen</option>
+        <option value="ch-zuerich">Zürich Flughafen</option>
+      </optgroup>
+      <optgroup label="Deutschland">
+        <option value="de-genf">Genf Flughafen</option>
+        <option value="de-basel">Basel Flughafen</option>
+        <option value="de-zuerich">Zürich Flughafen</option>
+      </optgroup>
+      <optgroup label="Italien">
+        <option value="it-genf">Genf Flughafen</option>
+        <option value="it-basel">Basel Flughafen</option>
+        <option value="it-zuerich">Zürich Flughafen</option>
+      </optgroup>
+      <optgroup label="Frankreich">
+        <option value="fr-genf">Genf Flughafen</option>
+        <option value="fr-basel">Basel Flughafen</option>
+        <option value="fr-zuerich">Zürich Flughafen</option>
+      </optgroup>
+      <optgroup label="Österreich">
+        <option value="at-genf">Genf Flughafen</option>
+        <option value="at-basel">Basel Flughafen</option>
+        <option value="at-zuerich">Zürich Flughafen</option>
+      </optgroup>
+    </select>
+  </fieldset>
+  <fieldset>
+    <legend>Art der Unterkunft</legend>
+    <input type="radio" id="ferienwohnungs" name="Unterkunft" value="Ferienwohnung"/>
+    <label for="ferienwohnungs">Ferienwohnung</label>
+    <input type="radio" id="hotels" name="Unterkunft" value="Hotel"/>
+    <label for="hotels">Hotel</label>
+    <input type="radio" id="hostels" name="Unterkunft" value="Hostel"/>
+    <label for="hostels">Hostel</label>
+  </fieldset>
+  <fieldset>
+    <legend>Additional Services</legend>
+    <input value="SPA" type="checkbox" name="zusatzleistungen[]" id="spa"/>
+    <label for="spa">SPA</label>
+    <input value="Flughafentransfer" type="checkbox" name="zusatzleistungen[]" id="flughafentransfer"/>
+    <label for="flughafentransfer">Flughafentransfer</label>
+    <input value="Fruehstueck" type="checkbox" name="zusatzleistungen[]" id="fruehstueck"/>
+    <label for="fruehstueck">Frühstück</label>
+    <input value="Minibar" type="checkbox" name="zusatzleistungen[]" id="minibar"/>
+    <label for="minibar">Minibar</label>
+  </fieldset>
+  <fieldset>
+    <legend>Anfangs und Endzeitpunkt</legend>
+    <input type="time" name="anfangszeitpunkt" id="anfangszeitpunkt"/>
+    <label for="anfangszeitpunkt">Anfangspunkt</label>
+    <input type="range" min="1" max="21" name="dauer" id="dauer"/>
+    <label for="dauer">Dauer</label>
+  </fieldset>
+  <fieldset>
+    <legend>Anzahl Reisende Personen</legend>
+    <input name="anzahlpersonen" type="number"/>
+  </fieldset>
+  <fieldset>
+    <legend>Fluggesellschaft</legend>
+    <select name="fluggesellschaft">
+      <option value="Lufthansa">Lufthansa</option>
+      <option value="Swiss">Swiss</option>
+      <option value="Edelweiss">Edelweiss</option>
+      <option value="LOT">LOT</option>
+    </select>
+  </fieldset>
+  <fieldset>
+    <legend>Optionale Dienstleistungen</legend>
+    <input type="checkbox" name="optdienst[]" value="prioritycheckin" id="pcheckin"/>
+    <label for="pcheckin">Priority-Check-In</label>
+    <input type="checkbox" name="optdienst[]" value="handgepeack" id="handgepeack"/>
+    <label for="handgepeack">Handgepäck</label>
+    <input type="checkbox" name="optdienst[]" value="mietwagen" id="mietwagen"/>
+    <label for="mietwagen">Mietwagen</label>
+  </fieldset>
+  <fieldset>
+    <legend>Reiseziel</legend>
+    <input type="text" name="reiseziel" list="reiseziele"/>
+    <datalist id="reiseziele">
+      <option>Mecklenburg Vorpommen</option>
+      <option>Warszawa</option>
+      <option>Kraków</option>
+      <option>Baden Würtenberg</option>
+      <option>Salzburg</option>
+      <option>Bern</option>
+    </datalist>
+  </fieldset>
+  <fieldset>
+    <legend>Ihre E-Mail</legend>
+    <input type="email" name="email" id="ihreemail"/>
+    <label for="ihreemail">Ihre E-Mail</label>
+  </fieldset>
+  <button type="submit">Submit</button>
+  <button type="reset">Reset</button>
+</form>
 
 </body>
 </html>
